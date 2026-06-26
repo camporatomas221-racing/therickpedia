@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rickpedia - Inicio</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="icon" href="img/images-Photoroom.png">
+</head>
+
+    <header>
+        <nav>
+
+            <img class="logo"
+                src="/img/ChatGPT Image 25 jun 2026, 10_35_01-Photoroom.png"
+                alt="Rick and Morty">
+
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="personajes.html">PERSONAJES</a></li>
+                <li><a href="https://rickandmortyapi.com/">API</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+<body>
+ <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                EXPLORA EL <br>
+                <span>MULTIVERSO</span>
+            </h1>
+
+            <p>
+                Descubrí los personajes más importantes de Rick and Morty,
+                explorá su información y viajá por el multiverso.
+            </p>
+
+            <div id="filters">
+
+                <input
+                    type="text"
+                    id="name-filter"
+                    placeholder="Buscar personaje...">
+
+            </div>
+
+        </div>
+
+</section>
+
+<section class="destacados">
+
+        <div class="titulo">
+
+            <h2>PERSONAJES DESTACADOS</h2>
+
+        </div>
+
+        <div class="carousel-container">
+
+            <button id="prev">&#10094;</button>
+
+            <div id="characters"></div>
+
+            <button id="next">&#10095;</button>
+
+        </div>
+
+</section>
+
+<section class="sinopsis-section">
+
+    <div class="titulo">
+        <h2>SINOPSIS</h2>
+    </div>
+
+    <div class="SINOPSIS">
+
+        <img src="/img/ricki.jpg" alt="Rick">
+
+        <p>
+            Rick and Morty es una serie animada de ciencia ficción que sigue las aventuras de Rick Sánchez, un científico brillante, alcohólico y excéntrico, y su nieto Morty Smith, un adolescente común y algo inseguro. Juntos emprenden peligrosos viajes a través del espacio, el tiempo y un multiverso infinito, enfrentándose a criaturas extraterrestres, realidades alternativas y situaciones absurdas que ponen a prueba tanto a la familia Smith como a las leyes del universo.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="estadistic-section">
+
+     <div class="titulo">
+        <h2>ESTADÍSTICAS</h2>
+    </div>
+
+<section class="stats">
+
+        <div class="stat">
+
+            <h3>826</h3>
+
+            <p>Personajes</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>126</h3>
+
+            <p>Lugares</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>51</h3>
+
+            <p>Especies</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>73</h3>
+
+            <p>Episodios</p>
+
+        </div>
+
+</section>
+</section>
+
+<footer>
+
+        <h2>Rickpedia</h2>
+
+        <p>
+            Este proyecto utiliza la API publica de Rick and Morty
+        </p>
+        <p>
+            https://rickandmortyapi.com
+        </p>
+
+</footer>
+
+    <script src="src/js/api.js"></script>
+    <script src="src/js/tarjetas.js"></script>
+    <script src="src/js/script.js"></script>
+
+</body>
+
+</html>

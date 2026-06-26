@@ -1,0 +1,232 @@
+
+/*GENERAL*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0B1D26;
+    color:#F2F5F5;
+    overflow-x:hidden;
+}
+
+/*PERSONAJES*/
+
+#characters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:30px;
+}
+
+/*DETALLE*/
+
+#detalle{
+    display:flex;
+    gap:35px;
+    align-items:center;
+
+    width:100%;
+    max-width:900px;
+    padding:30px;
+
+    background:#0B1D26;
+
+   border:2px solid #9EFF00;
+    border-radius: 8px;
+}
+
+/*Imagen*/
+
+#detalle img{
+     width:300px;
+
+    border-radius:12px;
+
+    border:3px solid #7DE8E5;
+
+    box-shadow:0 0 10px #7DE8E5;
+}
+
+/*Información*/
+
+#detalle .info{
+    flex:1;
+}
+
+#detalle h2{
+    color:#ffffff;
+
+    border-bottom:2px solid #67BEF4;
+
+    margin-bottom:20px;
+}
+
+#detalle p{
+    color:#ffffff;
+
+    font-size:17px;
+
+    margin:12px 0;
+
+    line-height:1.6;
+}
+
+#detalle span{
+    color:#ffffff;
+
+    font-weight:bold;
+}
+
+.titulo{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top: 30px;
+
+    color: #7DE8E5;
+
+    text-shadow: 0 0 2px #7DE8E5;
+}
+
+@media (max-width:1024px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 20px;
+    }
+
+    .hero p{
+        margin:auto;
+        margin-top:20px;
+    }
+
+    #filters,
+    .filtros{
+        justify-content:center;
+    }
+
+    .SINOPSIS{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    #characters{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+}
+
+@media (max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .logo{
+        width:170px;
+    }
+
+    .hero h1{
+        font-size:2.7rem;
+        text-align:center;
+    }
+
+    .hero p{
+        font-size:1rem;
+        text-align:center;
+    max-width:100%;
+    margin:20px auto;
+    }
+
+    .hero-text{
+    width:100%;
+    text-align:center;
+}
+
+.titulo{
+    justify-content:center;
+    text-align:center;
+}
+
+    #filters,
+    .filtros{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    #filters input,
+    .filtros input,
+    #filters select,
+    .filtros select{
+
+        width:90%;
+    }
+
+    .carousel-container{
+    flex-direction:column;
+    gap:15px;
+}
+
+    .character-card{
+        width:150px;
+    }
+
+    .SINOPSIS{
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+  padding:20px;
+    }
+
+    .SINOPSIS img{
+        width:220px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    #detalle{
+        flex-direction:column;
+        text-align:center;
+        width:90%;
+    }
+
+    #detalle img{
+        width:220px;
+    }
+
+    .destacados,
+.sinopsis-section,
+.estadistic-section{
+
+    width:90%;
+    margin:40px auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+}

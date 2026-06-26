@@ -1,0 +1,471 @@
+/*GENERAL*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0B1D26;
+    color:#F2F5F5;
+    overflow-x:hidden;
+}
+
+/* HERO*/
+
+.hero{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    min-height:400px;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+
+    padding:60px;
+
+    background: url("/img/IMG_20260625_123606.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    border-bottom:2px solid #1E5E63;
+}
+
+.hero-text{
+    flex:1;
+    max-width:700px;
+    margin:0;
+    text-align:left;
+}
+
+.hero h1{
+    font-size:4.5rem;
+    line-height:1;
+}
+
+.hero span{
+    color:#9EFF00;
+}
+
+.hero p{
+    margin:25px 0;
+
+    font-size:1.2rem;
+
+    max-width:400px;
+
+    line-height:1.6;
+}
+
+.hero p,
+.character-card h3,
+.SINOPSIS p{
+    color:white;
+}
+
+/* BUSCADOR*/
+
+#filters{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+#filters input{
+    width:360px;
+
+    padding:16px;
+
+    color:white;
+
+    border:2px solid #9EFF00;
+
+    border-radius:40px;
+
+    outline:none;
+}
+
+#filters select{
+    width:200px;
+
+    border-radius:40px;
+
+    color:white;
+
+    border:2px solid #7DE8E5;
+}
+
+/* PERSONAJES */
+
+.destacados,
+.sinopsis-section,
+.estadistic-section{
+    width:90%;
+    max-width:1400px;
+    margin:30px auto;
+}
+
+.titulo{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    color: #7DE8E5;
+
+    text-shadow: 0 0 2px #7DE8E5;
+}
+
+.carousel-container{
+    display:flex;
+   
+    justify-content: center;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+#characters{
+    display:flex;
+
+    gap:25px;
+}
+
+/* TARJETAS*/
+
+.character-card{
+    width:200px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.character-card,
+.stat{
+    border:3px solid #1E5E63;
+}
+
+.character-card,
+.stat,
+#filters input,
+#filters select{
+    background:#102733;
+}
+
+.character-card:hover{
+    transform:translateY(-10px);
+
+    border: 3px solid #7DE8E5;
+    box-shadow: 0 0 10px #7DE8E5;
+}
+
+.character-card img{
+    width:100%;
+}
+
+.character-card h3{
+    margin:18px;
+}
+
+.character-card p{
+
+    margin:0 18px 10px;
+
+    color:#C7D7D8;
+}
+
+/*INFO*/
+
+.info{
+    width:90%;
+
+    max-width:1400px;
+
+    margin:80px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+}
+
+.info img{
+    width:350px;
+}
+
+.info h2{
+    color:#9EFF00;
+
+    margin-bottom:25px;
+}
+
+.info p{
+    color:#C7D7D8;
+
+    line-height:1.8;
+}
+
+/*STATS*/
+
+.stats{
+    width:90%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.stat{
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+}
+
+.stat h3{
+    color:#7DE8E5;
+
+    text-shadow: 0 0 2px #7DE8E5;
+
+    font-size:3rem;
+}
+
+.stat p{
+    margin-top:10px;
+
+    color:#7DE8E5;
+}
+
+/* FOOTER*/
+
+footer{
+    margin-top:100px;
+
+    padding:40px;
+
+    background:#08151d;
+
+    border-top:2px solid #1E5E63;
+
+    text-align:center;
+}
+
+footer h2{
+    color:#9EFF00;
+
+    margin-bottom:15px;
+}
+
+/* SINOPSIS */
+
+.SINOPSIS{
+    display:flex;
+    gap:35px;
+    align-items:center;
+    padding:30px;
+    background:#0B1D26;
+    border:2px solid #9EFF00;
+    border-radius:8px;
+}
+
+/*Imagen*/
+
+.SINOPSIS img{
+    width:300px;
+
+    border-radius:12px;
+
+    border:3px solid #7DE8E5;
+
+    box-shadow:0 0 10px #7DE8E5;
+}
+
+.SINOPSIS p{
+    font-size: 1.2em;
+
+    margin:12px 0;
+
+    line-height:1.6;
+}
+
+#prev,
+#next{
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid #7DE8E5;
+    border-radius: 50%;
+
+    background-color: #0B1D26;
+    color: #ffffff;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#prev:hover,
+#next:hover{
+    box-shadow:0 0 10px #7DE8E5;
+}
+
+@media (max-width:1024px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 20px;
+    }
+
+    .hero p{
+        margin:auto;
+        margin-top:20px;
+    }
+
+    #filters,
+    .filtros{
+        justify-content:center;
+    }
+
+    .SINOPSIS{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    #characters{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+}
+
+@media (max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .logo{
+        width:170px;
+    }
+
+    .hero{
+    background-position: left center;
+    }
+    .hero h1{
+        font-size:2.7rem;
+        text-align:center;
+    }
+
+    .hero p{
+        font-size:1rem;
+        text-align:center;
+    max-width:100%;
+    margin:20px auto;
+    }
+
+    .hero-text{
+    width:100%;
+    text-align:center;
+}
+
+.titulo{
+    justify-content:center;
+    text-align:center;
+}
+
+    #filters,
+    .filtros{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    #filters input,
+    .filtros input,
+    #filters select,
+    .filtros select{
+
+        width:90%;
+    }
+
+    .carousel-container{
+    flex-direction:column;
+    gap:15px;
+}
+
+    .character-card{
+        width:150px;
+    }
+
+    .SINOPSIS{
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+  padding:20px;
+    }
+
+    .SINOPSIS img{
+        width:220px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    #detalle{
+        flex-direction:column;
+        text-align:center;
+        width:90%;
+    }
+
+    #detalle img{
+        width:220px;
+    }
+
+    .destacados,
+.sinopsis-section,
+.estadistic-section{
+
+    width:90%;
+    margin:40px auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+}
