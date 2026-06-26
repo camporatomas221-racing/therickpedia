@@ -1,6 +1,6 @@
-const API = "https://rickandmortyapi.com/api/character";
+export const API = "https://rickandmortyapi.com/api/character";
 
-async function obtenerPersonajes(url) {
+export async function obtenerPersonajes(url) {
 
     try {
 
@@ -22,7 +22,7 @@ async function obtenerPersonajes(url) {
 
 }
 
-async function obtenerDestacados() {
+export async function obtenerDestacados() {
 
     const destacados = [
         1,2,3,4,5,
@@ -35,48 +35,5 @@ async function obtenerDestacados() {
     return await obtenerPersonajes(
         `${API}/${destacados.join(",")}`
     );
-
-}
-
-function mostrarPersonajes(contenedor, personajes) {
-
-    contenedor.innerHTML = "";
-
-    personajes.forEach(character => {
-
-        const card = document.createElement("div");
-
-        card.classList.add("character-card");
-
-        card.innerHTML = `
-            <img src="${character.image}">
-            <h3>${character.name}</h3>
-            <p>Especie: ${character.species}</p>
-            <p>Estado: ${character.status}</p>
-        `;
-
-        card.addEventListener("click", () => {
-
-            window.location.href =
-                `detalle.html?id=${character.id}`;
-
-        });
-
-        contenedor.appendChild(card);
-
-    });
-
-}
-
-function actualizarPaginacion(data,pagina){
-
-    document.getElementById("numero-pagina").textContent =
-    `Página ${pagina} de ${data.info.pages}`;
-
-    document.getElementById("anterior").disabled =
-    !data.info.prev;
-
-    document.getElementById("siguiente").disabled =
-    !data.info.next;
 
 }

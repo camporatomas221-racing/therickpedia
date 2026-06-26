@@ -1,3 +1,6 @@
+import { obtenerDestacados } from "./api.js";
+import { mostrarPersonajes } from "./tarjetas.js";
+
 const charactersEl = document.getElementById("characters");
 const nameFilterEl = document.getElementById("name-filter");
 

@@ -1,4 +1,4 @@
-function crearTarjeta(character){
+export function crearTarjeta(character) {
 
     const card = document.createElement("div");
 
@@ -11,40 +11,32 @@ function crearTarjeta(character){
         <p>Estado: ${character.status}</p>
     `;
 
-    card.addEventListener("click",()=>{
-
-        window.location.href=
-        `detalle.html?id=${character.id}`;
-
+    card.addEventListener("click", () => {
+        window.location.href = `detalle.html?id=${character.id}`;
     });
 
     return card;
-
 }
 
-function mostrarPersonajes(contenedor,personajes){
+export function mostrarPersonajes(contenedor, personajes) {
 
-    contenedor.innerHTML="";
+    contenedor.innerHTML = "";
 
-    personajes.forEach(character=>{
-
-        contenedor.appendChild(
-            crearTarjeta(character)
-        );
-
+    personajes.forEach(character => {
+        contenedor.appendChild(crearTarjeta(character));
     });
 
 }
 
-function actualizarPaginacion(data,pagina){
+export function actualizarPaginacion(data, pagina) {
 
-    document.getElementById("numero-pagina").textContent=
+    document.getElementById("numero-pagina").textContent =
         `Página ${pagina} de ${data.info.pages}`;
 
-    document.getElementById("anterior").disabled=
+    document.getElementById("anterior").disabled =
         !data.info.prev;
 
-    document.getElementById("siguiente").disabled=
+    document.getElementById("siguiente").disabled =
         !data.info.next;
 
 }

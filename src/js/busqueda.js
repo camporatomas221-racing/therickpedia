@@ -1,23 +1,23 @@
+import { API, obtenerPersonajes } from "./api.js";
+import { mostrarPersonajes, actualizarPaginacion } from "./tarjetas.js";
+
 const charactersEl = document.getElementById("characters");
 
 const params = new URLSearchParams(window.location.search);
-
 const name = params.get("name") || "";
 
 let pagina = 1;
 
-async function buscar(){
+async function buscar() {
 
     const data = await obtenerPersonajes(
-
         `${API}?page=${pagina}&name=${encodeURIComponent(name)}`
-
     );
 
-    if(data.error){
+    if (data.error) {
 
         charactersEl.innerHTML =
-        "<h2>No se encontraron personajes.</h2>";
+            "<h2>No se encontraron personajes.</h2>";
 
         return;
 
@@ -28,24 +28,22 @@ async function buscar(){
         data.results
     );
 
-    actualizarPaginacion(data,pagina);
+    actualizarPaginacion(data, pagina);
 
 }
 
-document.getElementById("siguiente").addEventListener("click",()=>{
+document.getElementById("siguiente").addEventListener("click", () => {
 
     pagina++;
-
     buscar();
 
 });
 
-document.getElementById("anterior").addEventListener("click",()=>{
+document.getElementById("anterior").addEventListener("click", () => {
 
-    if(pagina>1){
+    if (pagina > 1) {
 
         pagina--;
-
         buscar();
 
     }
